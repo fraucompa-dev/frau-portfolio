@@ -1,242 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Frau Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frau Portfolio</title>
 
-  <style>
-    /* =========================
-       🌙 THEME VARIABLES
-    ========================== */
-    :root {
-      --bg: #f4f7fb;
-      --card: #ffffff;
-      --text: #111827;
-      --muted: #6b7280;
-      --border: #e5e7eb;
-      --accent: #4b5563;
-    }
+<style>
+:root {
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+}
 
-    body.dark {
-      --bg: #0f172a;
-      --card: #111827;
-      --text: #f9fafb;
-      --muted: #9ca3af;
-      --border: #1f2937;
-      --accent: #9ca3af;
-    }
+body.dark {
+  --bg: #0f172a;
+  --card: #111827;
+  --text: #f9fafb;
+  --muted: #9ca3af;
+  --border: #1f2937;
+}
 
-    /* =========================
-       BASE STYLE
-    ========================== */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: var(--bg);
-      color: var(--text);
-      transition: all 0.4s ease;
-    }
+body {
+  font-family: Arial;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.4s ease;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+html { scroll-behavior: smooth; }
 
-    /* =========================
-       NAVBAR (GLASS EFFECT)
-    ========================== */
-    .navbar {
-      position: sticky;
-      top: 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 25px;
-      background: rgba(255,255,255,0.7);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-      z-index: 1000;
-    }
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 25px;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
 
-    body.dark .navbar {
-      background: rgba(17,24,39,0.7);
-    }
+body.dark .navbar {
+  background: rgba(17,24,39,0.7);
+}
 
-    .nav-links a {
-      margin-left: 15px;
-      text-decoration: none;
-      color: var(--text);
-      font-weight: 500;
-    }
+/* HEADER */
+header {
+  text-align: center;
+  padding: 60px 20px;
+}
 
-    /* =========================
-       HERO HEADER
-    ========================== */
-    header {
-      text-align: center;
-      padding: 60px 20px;
-    }
+header h1 { margin: 0; }
 
-    header h1 {
-      font-size: 40px;
-      margin: 0;
-    }
+/* SECTIONS */
+section {
+  background: var(--card);
+  margin: 20px auto;
+  padding: 20px;
+  width: 85%;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
 
-    header p {
-      color: var(--muted);
-    }
+/* CARDS */
+.card {
+  background: var(--card);
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  transition: 0.3s;
+}
 
-    /* =========================
-       SECTIONS
-    ========================== */
-    section {
-      background: var(--card);
-      margin: 20px auto;
-      padding: 20px;
-      width: 85%;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      transition: 0.3s ease;
-    }
+.card:hover {
+  transform: translateY(-5px);
+}
 
-    section:hover {
-      transform: translateY(-3px);
-    }
+/* BUTTON */
+.btn {
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  cursor: pointer;
+}
 
-    h2 {
-      color: var(--text);
-    }
+/* ANIMATION */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.8s;
+}
 
-    /* =========================
-       CARDS (PROJECTS)
-    ========================== */
-    .card {
-      background: var(--card);
-      padding: 15px;
-      margin-top: 15px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      transition: 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    }
-
-    /* =========================
-       BUTTONS
-    ========================== */
-    .btn {
-      padding: 8px 14px;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      background: var(--card);
-      color: var(--text);
-      cursor: pointer;
-      margin-left: 10px;
-    }
-
-    /* =========================
-       ANIMATION (FADE IN)
-    ========================== */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.8s ease;
-    }
-
-    .fade-in.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-  </style>
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
 </head>
 
 <body>
 
-  <!-- ================= NAVBAR ================= -->
-  <div class="navbar">
-    <div><b>Frau.dev</b></div>
+<!-- NAVBAR -->
+<div class="navbar">
+  <b>Frau.dev</b>
+  <button class="btn" onclick="toggleDark()">🌙</button>
+</div>
 
-    <div class="nav-links">
-      <a href="#projects">Projects</a>
-      <a href="#aws">AWS</a>
-      <a href="#contact">Contact</a>
+<!-- HEADER -->
+<header class="fade-in">
+  <h1>FRAULINE A. COMPARATIVO</h1>
+  <p>Aspiring AWS Cloud & IT Professional</p>
 
-      <button class="btn" onclick="toggleDark()">🌙</button>
-    </div>
-  </div>
+  <p>
+    📧 <a href="mailto:frau.compa@gmail.com">Email</a> |
+    🔗 <a href="https://linkedin.com/in/frauline-adol-comparativo-509bb7117" target="_blank">LinkedIn</a>
+  </p>
+</header>
 
-  <!-- ================= HERO ================= -->
-  <header class="fade-in">
-    <h1>FRAULINE A. COMPARATIVO</h1>
-    <p>Aspiring AWS Cloud & IT Professional</p>
+<!-- SUMMARY -->
+<section class="fade-in">
+<h2>Career Summary</h2>
+<p>
+Experienced Data and Operations Specialist with 10+ years in data processing,
+systems management, and business operations. Currently transitioning into AWS Cloud Computing.
+</p>
+</section>
 
-    <p>
-      📧 <a href="mailto:frau.compa@gmail.com">Email</a> |
-      🔗 <a href="https://linkedin.com/in/frauline-adol-comparativo-509bb7117" target="_blank">LinkedIn</a>
-    </p>
-  </header>
+<!-- SKILLS -->
+<section class="fade-in">
+<h2>Skills</h2>
+<ul>
+<li>Data Management & Reporting</li>
+<li>MS Office 365</li>
+<li>Salesforce, Addepar, Citrix</li>
+<li>Process Improvement</li>
+<li>Team Training</li>
+<li>AWS Fundamentals</li>
+</ul>
+</section>
 
-  <!-- ================= SUMMARY ================= -->
-  <section class="fade-in">
-    <h2>Career Summary</h2>
-    <p>Experienced Data and Operations Specialist transitioning into AWS Cloud Computing.</p>
-  </section>
+<!-- CERTIFICATIONS -->
+<section class="fade-in">
+<h2>Certifications</h2>
+<ul>
+<li>AWS SimuLearn Cloud Practitioner</li>
+<li>AWS Cloud Practitioner Essentials</li>
+<li>AWS Cloud Quest</li>
+<li>Generative AI Badge</li>
+</ul>
 
-  <!-- ================= SKILLS ================= -->
-  <section class="fade-in">
-    <h2>Skills</h2>
-    <ul>
-      <li>Data Management & Reporting</li>
-      <li>Salesforce, Addepar, Citrix</li>
-      <li>AWS Cloud Fundamentals</li>
-    </ul>
-  </section>
+<p>
+<a href="https://www.credly.com/users/frauline-comparativo" target="_blank">
+View Credly Profile
+</a>
+</p>
+</section>
 
-  <!-- ================= PROJECTS ================= -->
-  <section id="projects" class="fade-in">
-    <h2>Projects</h2>
+<!-- EXPERIENCE -->
+<section class="fade-in">
+<h2>Experience</h2>
 
-    <div class="card">AWS Cloud Fundamentals Lab</div>
-    <div class="card">Networking & Infrastructure</div>
-    <div class="card">Databases & Storage</div>
-    <div class="card">Generative AI Exploration</div>
-  </section>
+<p><b>Personiv</b> – Senior Process Executive</p>
+<p><b>JLL</b> – Data Analyst</p>
+<p><b>Accenture Philippines</b> – Network Operation Associate</p>
+<p><b>Cathedral of Praise</b> – Admin Coordinator</p>
+</section>
 
-  <!-- ================= AWS ================= -->
-  <section id="aws" class="fade-in">
-    <h2>AWS Certifications</h2>
+<!-- PROJECTS -->
+<section class="fade-in">
+<h2>Projects</h2>
 
-    <div class="card">Cloud Practitioner Badge</div>
-    <div class="card">Generative AI Badge</div>
-    <div class="card">Cloud Quest Completion</div>
-  </section>
+<div class="card">AWS Cloud Fundamentals</div>
+<div class="card">Networking & Infrastructure</div>
+<div class="card">Databases & Storage</div>
+<div class="card">Generative AI</div>
 
-  <!-- ================= SCRIPT ================= -->
-  <script>
-    // 🌙 DARK MODE
-    function toggleDark() {
-      document.body.classList.toggle("dark");
+</section>
+
+<script>
+function toggleDark(){
+  document.body.classList.toggle("dark");
+}
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
     }
+  });
+});
 
-    // ✨ SCROLL ANIMATION
-    const elements = document.querySelectorAll('.fade-in');
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting) {
-          entry.target.classList.add('show');
-        }
-      });
-    });
-
-    elements.forEach(el => observer.observe(el));
-  </script>
+document.querySelectorAll('.fade-in').forEach(el=>{
+  observer.observe(el);
+});
+</script>
 
 </body>
 </html>
