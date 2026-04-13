@@ -32,6 +32,7 @@ body {
 
 html { scroll-behavior: smooth; }
 
+/* NAV */
 .navbar {
   position: sticky;
   top: 0;
@@ -41,17 +42,20 @@ html { scroll-behavior: smooth; }
   background: rgba(255,255,255,0.7);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
+  z-index: 10;
 }
 
 body.dark .navbar {
   background: rgba(17,24,39,0.7);
 }
 
+/* HEADER */
 header {
   text-align: center;
   padding: 50px 20px;
 }
 
+/* SECTIONS */
 section {
   background: var(--card);
   margin: 20px auto;
@@ -61,8 +65,7 @@ section {
   border: 1px solid var(--border);
 }
 
-h2 { margin-bottom: 10px; }
-
+/* GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -73,13 +76,14 @@ h2 { margin-bottom: 10px; }
   width: 100%;
   border-radius: 10px;
   border: 1px solid var(--border);
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .grid img:hover {
   transform: scale(1.05);
 }
 
+/* BUTTON */
 .btn {
   padding: 8px 12px;
   border: 1px solid var(--border);
@@ -88,6 +92,7 @@ h2 { margin-bottom: 10px; }
   border-radius: 6px;
 }
 
+/* CTA */
 .floating-cta {
   position: fixed;
   bottom: 20px;
@@ -101,6 +106,7 @@ h2 { margin-bottom: 10px; }
   z-index: 999;
 }
 
+/* MODAL */
 .modal {
   display: none;
   position: fixed;
@@ -127,10 +133,11 @@ h2 { margin-bottom: 10px; }
   font-size: 20px;
 }
 
+/* ANIMATION */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
-  transition: 0.8s;
+  transition: 0.8s ease;
 }
 
 .fade-in.show {
@@ -142,13 +149,16 @@ h2 { margin-bottom: 10px; }
 
 <body>
 
+<!-- NAV -->
 <div class="navbar">
   <b>Frau.dev</b>
   <button class="btn" onclick="toggleDark()">🌙</button>
 </div>
 
+<!-- CTA -->
 <a href="#contact" class="floating-cta">💼 Hire Me</a>
 
+<!-- HEADER -->
 <header class="fade-in">
   <h1>FRAULINE A. COMPARATIVO</h1>
   <p>Aspiring AWS Cloud & IT Professional</p>
@@ -160,7 +170,9 @@ h2 { margin-bottom: 10px; }
   <p>📧 <a href="mailto:frau.compa@gmail.com">frau.compa@gmail.com</a></p>
   <p>📱 <a href="tel:+639516440384">(+63) 951-644-0384</a></p>
   <p>📱 <a href="tel:+639756659136">(+63) 975-665-9136</a></p>
-  <p>🔗 <a href="linkedin.com/in/frauline-adol-comparativo-509bb7117">LinkedIn</a></p>
+  <p>🔗 <a href="https://linkedin.com/in/frauline-adol-comparativo-509bb7117" target="_blank">LinkedIn</a></p>
+
+  <button class="btn" onclick="openModal()">Quick Contact</button>
 </section>
 
 <!-- PROFILE -->
