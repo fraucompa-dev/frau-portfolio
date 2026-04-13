@@ -32,6 +32,7 @@ body {
 
 html { scroll-behavior: smooth; }
 
+/* NAVBAR */
 .navbar {
   position: sticky;
   top: 0;
@@ -47,11 +48,13 @@ body.dark .navbar {
   background: rgba(17,24,39,0.7);
 }
 
+/* HEADER */
 header {
   text-align: center;
   padding: 60px 20px;
 }
 
+/* SECTIONS */
 section {
   background: var(--card);
   margin: 20px auto;
@@ -61,8 +64,7 @@ section {
   border: 1px solid var(--border);
 }
 
-h2 { margin-bottom: 10px; }
-
+/* CARDS */
 .card {
   background: var(--card);
   padding: 15px;
@@ -76,6 +78,26 @@ h2 { margin-bottom: 10px; }
   transform: translateY(-5px);
 }
 
+/* GRID FOR IMAGES */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.grid img {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  transition: 0.3s;
+}
+
+.grid img:hover {
+  transform: scale(1.05);
+}
+
+/* BUTTON */
 .btn {
   padding: 6px 12px;
   border: 1px solid var(--border);
@@ -83,6 +105,7 @@ h2 { margin-bottom: 10px; }
   cursor: pointer;
 }
 
+/* ANIMATION */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -98,110 +121,101 @@ h2 { margin-bottom: 10px; }
 
 <body>
 
+<!-- NAVBAR -->
 <div class="navbar">
   <b>Frau.dev</b>
   <button class="btn" onclick="toggleDark()">🌙</button>
 </div>
 
+<!-- HEADER -->
 <header class="fade-in">
   <h1>FRAULINE A. COMPARATIVO</h1>
   <p>Aspiring AWS Cloud & IT Professional</p>
-
-  <p>
-    📧 <a href="mailto:frau.compa@gmail.com">Email</a> |
-    🔗 <a href="https://linkedin.com/in/frauline-adol-comparativo-509bb7117" target="_blank">LinkedIn</a>
-  </p>
 </header>
 
+<!-- SUMMARY -->
 <section class="fade-in">
 <h2>Career Summary</h2>
-<p>
-Experienced Data and Operations Specialist with 10+ years in data processing,
-systems management, and business operations. Skilled in Salesforce, Addepar,
-Citrix tools, and reporting. Currently transitioning into AWS Cloud Computing.
-</p>
+<p>Experienced Data and Operations Specialist transitioning into AWS Cloud Computing.</p>
 </section>
 
+<!-- SKILLS -->
 <section class="fade-in">
 <h2>Skills</h2>
 <ul>
 <li>Data Management & Reporting</li>
-<li>MS Office 365 (Excel, Word, PowerPoint)</li>
-<li>Salesforce, Addepar, Citrix systems</li>
-<li>Process Improvement</li>
-<li>Team Training & Support</li>
-<li>AWS Cloud Fundamentals (in progress)</li>
+<li>Salesforce, Addepar, Citrix</li>
+<li>AWS Cloud Fundamentals</li>
 </ul>
 </section>
 
+<!-- CERTIFICATIONS -->
 <section class="fade-in">
 <h2>Certifications</h2>
 <ul>
-<li>AWS Complete Certificate – SimuLearn Cloud Practitioner</li>
-<li>AWS Complete Certificate – Cloud Practitioner Essentials</li>
-<li>AWS Cloud Quest: Cloud Practitioner</li>
-<li>AWS Cloud Quest: Generative AI</li>
+<li>AWS Cloud Practitioner</li>
+<li>AWS Generative AI Badge</li>
+<li>Cloud Quest Completion</li>
 </ul>
-
-<p>
-<a href="https://www.credly.com/users/frauline-comparativo" target="_blank">
-View Credly Profile
-</a>
-</p>
 </section>
 
+<!-- EXPERIENCE -->
 <section class="fade-in">
 <h2>Experience</h2>
 
-<p><b>Personiv</b> – Senior Process Executive (2021–Present)</p>
-<ul>
-<li>Data processing, reporting, and system management (Salesforce, Addepar)</li>
-<li>Team training and onboarding support</li>
-</ul>
-
-<p><b>JLL</b> – Data Analyst (2019–2021)</p>
-<ul>
-<li>Property and tax data analysis and reporting</li>
-<li>Database management and documentation</li>
-</ul>
-
-<p><b>Accenture Philippines</b> – Network Operation Associate (2012–2016)</p>
-<ul>
-<li>Network provisioning and system operations</li>
-<li>Trained junior engineers and supported reporting tasks</li>
-</ul>
-
-<p><b>Cathedral of Praise</b> – Admin / Procurement / Coordinator (2017–2019)</p>
-<ul>
-<li>Administrative support and documentation</li>
-<li>Procurement and facility coordination</li>
-</ul>
-
+<p><b>Personiv</b> – Senior Process Executive</p>
+<p><b>JLL</b> – Data Analyst</p>
+<p><b>Accenture Philippines</b> – Network Operations Associate</p>
+<p><b>Cathedral of Praise</b> – Admin / Procurement / Coordinator</p>
 </section>
 
+<!-- CLOUD -->
 <section class="fade-in">
-<h2>Projects (AWS & Cloud Training)</h2>
-
-<div class="card">
-<h3>☁️ AWS Cloud Fundamentals</h3>
-<p>Completed Cloud Quest labs covering AWS basics and cloud concepts.</p>
+<h2>☁️ Cloud Fundamentals</h2>
+<div class="grid">
+  <img src="images/cloud1.png">
+  <img src="images/cloud2.png">
+  <img src="images/cloud3.png">
+  <img src="images/cloud4.png">
+  <img src="images/cloud5.png">
 </div>
+</section>
 
-<div class="card">
-<h3>🌐 Networking & Infrastructure</h3>
-<p>Hands-on labs for VPCs and scalable architectures.</p>
+<!-- NETWORK -->
+<section class="fade-in">
+<h2>🌐 Networking & Databases</h2>
+<div class="grid">
+  <img src="images/network1.png">
+  <img src="images/network2.png">
+  <img src="images/db1.png">
+  <img src="images/db2.png">
+  <img src="images/db3.png">
 </div>
+</section>
 
-<div class="card">
-<h3>🗄️ Databases & Storage</h3>
-<p>Practiced SQL, NoSQL, and AWS storage systems.</p>
+<!-- AI -->
+<section class="fade-in">
+<h2>🤖 Generative AI</h2>
+<div class="grid">
+  <img src="images/ai1.png">
+  <img src="images/ai2.png">
+  <img src="images/ai3.png">
+  <img src="images/ai4.png">
+  <img src="images/ai5.png">
+  <img src="images/ai6.png">
+  <img src="images/ai7.png">
 </div>
+</section>
 
-<div class="card">
-<h3>🤖 Generative AI</h3>
-<p>Explored Bedrock, SageMaker, and AI tools.</p>
+<!-- SIMULEARN -->
+<section class="fade-in">
+<h2>🧪 SimuLearn Projects</h2>
+<div class="grid">
+  <img src="images/sim1.png">
+  <img src="images/sim2.png">
+  <img src="images/sim3.png">
+  <img src="images/sim4.png">
 </div>
-
 </section>
 
 <script>
