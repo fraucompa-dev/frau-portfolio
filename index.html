@@ -1,30 +1,286 @@
-<section class="fade-in">
-<h2>☁️ Cloud & Compute</h2>
-<div class="grid">
-  <img src="images/cloud1.png">
-  <img src="images/cloud2.png">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frau Portfolio</title>
+
+<style>
+:root {
+  --bg: #f3f4f6;
+  --card: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+}
+
+body.dark {
+  --bg: #0f172a;
+  --card: #111827;
+  --text: #f9fafb;
+  --muted: #9ca3af;
+  --border: #1f2937;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.4s ease;
+}
+
+html { scroll-behavior: smooth; }
+
+/* NAV */
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+
+body.dark .navbar {
+  background: rgba(17,24,39,0.7);
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* SECTIONS */
+section {
+  background: var(--card);
+  margin: 20px auto;
+  padding: 20px;
+  width: 85%;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+}
+
+.grid img {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  transition: 0.3s;
+}
+
+.grid img:hover {
+  transform: scale(1.05);
+}
+
+/* BUTTON */
+.btn {
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+/* FLOATING CTA */
+.floating-cta {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #0d6efd;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 999;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background: white;
+  margin: 10% auto;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* ANIMATION */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.8s;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="navbar">
+  <b>Frau.dev</b>
+  <button class="btn" onclick="toggleDark()">🌙</button>
 </div>
+
+<!-- CTA -->
+<a href="#contact" class="floating-cta">💼 Hire Me</a>
+
+<!-- HEADER -->
+<header class="fade-in">
+  <h1>FRAULINE A. COMPARATIVO</h1>
+  <p>Aspiring AWS Cloud & IT Professional</p>
+</header>
+
+<!-- CONTACT -->
+<section id="contact" class="fade-in">
+  <h2>📞 Contact</h2>
+
+  <p>📧 <a href="mailto:frau.compa@gmail.com">frau.compa@gmail.com</a></p>
+  <p>📱 <a href="tel:+639516440384">(+63) 951-644-0384</a></p>
+  <p>📱 <a href="tel:+639756659136">(+63) 975-665-9136</a></p>
+  <p>🔗 <a href="https://linkedin.com/in/frauline-adol-comparativo-509bb7117" target="_blank">LinkedIn</a></p>
+  <p>🏅 <a href="https://www.credly.com/users/frauline-comparativo/badges" target="_blank">Credly</a></p>
+
+  <button class="btn" onclick="openModal()">📩 Quick Contact</button>
+</section>
+
+<!-- SUMMARY -->
+<section class="fade-in">
+  <h2>Career Profile</h2>
+  <p>Experienced Data & Operations Specialist transitioning into AWS Cloud Computing.</p>
+</section>
+
+<!-- SKILLS -->
+<section class="fade-in">
+  <h2>Skills</h2>
+  <ul>
+    <li>MS Office / Excel / Reporting</li>
+    <li>Salesforce / Addepar / Citrix</li>
+    <li>Process Improvement</li>
+    <li>AWS Cloud Fundamentals</li>
+  </ul>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="fade-in">
+  <h2>Experience</h2>
+
+  <p><b>Personiv</b> – Senior Process Executive</p>
+  <p><b>JLL</b> – Data Analyst</p>
+  <p><b>Accenture Philippines</b> – Network Operations Associate</p>
+  <p><b>Cathedral of Praise</b> – Admin / Procurement / Coordinator</p>
+</section>
+
+<!-- PROJECTS -->
+<section class="fade-in">
+  <h2>☁️ Cloud Projects</h2>
+  <div class="grid">
+    <img src="images/cloud1.png">
+    <img src="images/cloud2.png">
+  </div>
 </section>
 
 <section class="fade-in">
-<h2>🌐 Networking & Databases</h2>
-<div class="grid">
-  <img src="images/network1.png">
-  <img src="images/db1.png">
-</div>
+  <h2>🌐 Networking & Databases</h2>
+  <div class="grid">
+    <img src="images/network1.png">
+    <img src="images/db1.png">
+    <img src="images/db2.png">
+  </div>
 </section>
 
 <section class="fade-in">
-<h2>🤖 Generative AI</h2>
-<div class="grid">
-  <img src="images/ai1.png">
-  <img src="images/ai2.png">
-</div>
+  <h2>🤖 Generative AI</h2>
+  <div class="grid">
+    <img src="images/ai1.png">
+    <img src="images/ai2.png">
+    <img src="images/ai3.png">
+  </div>
 </section>
 
 <section class="fade-in">
-<h2>🧪 SimuLearn</h2>
-<div class="grid">
-  <img src="images/sim1.png">
-</div>
+  <h2>🧪 SimuLearn</h2>
+  <div class="grid">
+    <img src="images/sim1.png">
+  </div>
 </section>
+
+<!-- MODAL -->
+<div id="emailModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Contact Me</h2>
+    <p>Email: frau.compa@gmail.com</p>
+    <p>Phone: +63 951-644-0384</p>
+    <p>Phone: +63 975-665-9136</p>
+  </div>
+</div>
+
+<script>
+function toggleDark(){
+  document.body.classList.toggle("dark");
+}
+
+function openModal(){
+  document.getElementById("emailModal").style.display = "block";
+}
+
+function closeModal(){
+  document.getElementById("emailModal").style.display = "none";
+}
+
+window.onclick = function(e){
+  let modal = document.getElementById("emailModal");
+  if(e.target == modal){
+    modal.style.display = "none";
+  }
+}
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll('.fade-in').forEach(el=>{
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>
