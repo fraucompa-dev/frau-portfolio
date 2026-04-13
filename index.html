@@ -32,7 +32,6 @@ body {
 
 html { scroll-behavior: smooth; }
 
-/* NAV */
 .navbar {
   position: sticky;
   top: 0;
@@ -49,13 +48,11 @@ body.dark .navbar {
   background: rgba(17,24,39,0.7);
 }
 
-/* HEADER */
 header {
   text-align: center;
   padding: 50px 20px;
 }
 
-/* SECTIONS */
 section {
   background: var(--card);
   margin: 20px auto;
@@ -65,7 +62,6 @@ section {
   border: 1px solid var(--border);
 }
 
-/* GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -83,7 +79,6 @@ section {
   transform: scale(1.05);
 }
 
-/* BUTTON */
 .btn {
   padding: 8px 12px;
   border: 1px solid var(--border);
@@ -92,7 +87,6 @@ section {
   border-radius: 6px;
 }
 
-/* FLOATING CTA */
 .floating-cta {
   position: fixed;
   bottom: 20px;
@@ -106,7 +100,6 @@ section {
   z-index: 999;
 }
 
-/* MODAL */
 .modal {
   display: none;
   position: fixed;
@@ -133,7 +126,6 @@ section {
   font-size: 20px;
 }
 
-/* ANIMATION */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -149,22 +141,18 @@ section {
 
 <body>
 
-<!-- NAV -->
 <div class="navbar">
   <b>Frau.dev</b>
   <button class="btn" onclick="toggleDark()">🌙</button>
 </div>
 
-<!-- CTA -->
 <a href="#contact" class="floating-cta">💼 Hire Me</a>
 
-<!-- HEADER -->
 <header class="fade-in">
   <h1>FRAULINE A. COMPARATIVO</h1>
   <p>Aspiring AWS Cloud & IT Professional</p>
 </header>
 
-<!-- CONTACT -->
 <section id="contact" class="fade-in">
   <h2>📞 Contact</h2>
 
@@ -177,13 +165,11 @@ section {
   <button class="btn" onclick="openModal()">📩 Quick Contact</button>
 </section>
 
-<!-- SUMMARY -->
 <section class="fade-in">
   <h2>Career Profile</h2>
   <p>Experienced Data & Operations Specialist transitioning into AWS Cloud Computing.</p>
 </section>
 
-<!-- SKILLS -->
 <section class="fade-in">
   <h2>Skills</h2>
   <ul>
@@ -194,51 +180,48 @@ section {
   </ul>
 </section>
 
-<!-- EXPERIENCE -->
 <section class="fade-in">
   <h2>Experience</h2>
-
   <p><b>Personiv</b> – Senior Process Executive</p>
   <p><b>JLL</b> – Data Analyst</p>
   <p><b>Accenture Philippines</b> – Network Operations Associate</p>
   <p><b>Cathedral of Praise</b> – Admin / Procurement / Coordinator</p>
 </section>
 
-<!-- PROJECTS -->
+<!-- 🔥 FIXED IMAGES (IMPORTANT PART) -->
 <section class="fade-in">
   <h2>☁️ Cloud Projects</h2>
   <div class="grid">
-    <img src="cloud1.png">
-    <img src="cloud2.png">
+    <img src="images/cloud1.png">
+    <img src="images/cloud2.png">
   </div>
 </section>
 
 <section class="fade-in">
   <h2>🌐 Networking & Databases</h2>
   <div class="grid">
-    <img src="network1.png">
-    <img src="db1.png">
-    <img src="db2.png">
+    <img src="images/network1.png">
+    <img src="images/db1.png">
+    <img src="images/db2.png">
   </div>
 </section>
 
 <section class="fade-in">
   <h2>🤖 Generative AI</h2>
   <div class="grid">
-    <img src="ai1.png">
-    <img src="ai2.png">
-    <img src="ai3.png">
+    <img src="images/ai1.png">
+    <img src="images/ai2.png">
+    <img src="images/ai3.png">
   </div>
 </section>
 
 <section class="fade-in">
   <h2>🧪 SimuLearn</h2>
   <div class="grid">
-    <img src="sim1.png">
+    <img src="images/sim1.png">
   </div>
 </section>
 
-<!-- MODAL -->
 <div id="emailModal" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal()">&times;</span>
