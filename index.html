@@ -41,7 +41,6 @@ html { scroll-behavior: smooth; }
   background: rgba(255,255,255,0.7);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
-  z-index: 10;
 }
 
 body.dark .navbar {
@@ -61,6 +60,8 @@ section {
   border-radius: 12px;
   border: 1px solid var(--border);
 }
+
+h2 { margin-bottom: 10px; }
 
 .grid {
   display: grid;
@@ -153,23 +154,22 @@ section {
   <p>Aspiring AWS Cloud & IT Professional</p>
 </header>
 
+<!-- CONTACT -->
 <section id="contact" class="fade-in">
   <h2>📞 Contact</h2>
-
   <p>📧 <a href="mailto:frau.compa@gmail.com">frau.compa@gmail.com</a></p>
   <p>📱 <a href="tel:+639516440384">(+63) 951-644-0384</a></p>
   <p>📱 <a href="tel:+639756659136">(+63) 975-665-9136</a></p>
-  <p>🔗 <a href="https://linkedin.com/in/frauline-adol-comparativo-509bb7117" target="_blank">LinkedIn</a></p>
-  <p>🏅 <a href="https://www.credly.com/users/frauline-comparativo/badges" target="_blank">Credly</a></p>
-
-  <button class="btn" onclick="openModal()">📩 Quick Contact</button>
+  <p>🔗 <a href="linkedin.com/in/frauline-adol-comparativo-509bb7117">LinkedIn</a></p>
 </section>
 
+<!-- PROFILE -->
 <section class="fade-in">
   <h2>Career Profile</h2>
   <p>Experienced Data & Operations Specialist transitioning into AWS Cloud Computing.</p>
 </section>
 
+<!-- SKILLS -->
 <section class="fade-in">
   <h2>Skills</h2>
   <ul>
@@ -180,6 +180,7 @@ section {
   </ul>
 </section>
 
+<!-- EXPERIENCE -->
 <section class="fade-in">
   <h2>Experience</h2>
   <p><b>Personiv</b> – Senior Process Executive</p>
@@ -188,50 +189,51 @@ section {
   <p><b>Cathedral of Praise</b> – Admin / Procurement / Coordinator</p>
 </section>
 
-<!-- 🔥 FIXED IMAGES (IMPORTANT PART) -->
+<!-- PROJECTS -->
 <section class="fade-in">
   <h2>☁️ Cloud Projects</h2>
   <div class="grid">
-    <img src="images/cloud1.png">
-    <img src="images/cloud2.png">
-    <img src="images/cloud3.png">
-    <img src="images/cloud4.png">
-    <img src="images/cloud5.png">
+    <img src="images/cloud1.png" onerror="this.style.display='none'">
+    <img src="images/cloud2.png" onerror="this.style.display='none'">
+    <img src="images/cloud3.png" onerror="this.style.display='none'">
+    <img src="images/cloud4.png" onerror="this.style.display='none'">
+    <img src="images/cloud5.png" onerror="this.style.display='none'">
   </div>
 </section>
 
 <section class="fade-in">
   <h2>🌐 Networking & Databases</h2>
   <div class="grid">
-    <img src="images/network1.png">
-    <img src="images/network2.png">
-    <img src="images/db1.png">
-    <img src="images/db2.png">
-    <img src="images/db3.png">
+    <img src="images/network1.png" onerror="this.style.display='none'">
+    <img src="images/network2.png" onerror="this.style.display='none'">
+    <img src="images/db1.png" onerror="this.style.display='none'">
+    <img src="images/db2.png" onerror="this.style.display='none'">
+    <img src="images/db3.png" onerror="this.style.display='none'">
   </div>
 </section>
 
 <section class="fade-in">
   <h2>🤖 Generative AI</h2>
   <div class="grid">
-    <img src="images/ai1.png">
-    <img src="images/ai2.png">
-    <img src="images/ai3.png">
-    <img src="images/ai4.png">
-    <img src="images/ai5.png">
+    <img src="images/ai1.png" onerror="this.style.display='none'">
+    <img src="images/ai2.png" onerror="this.style.display='none'">
+    <img src="images/ai3.png" onerror="this.style.display='none'">
+    <img src="images/ai4.png" onerror="this.style.display='none'">
+    <img src="images/ai5.png" onerror="this.style.display='none'">
   </div>
 </section>
 
 <section class="fade-in">
   <h2>🧪 SimuLearn</h2>
   <div class="grid">
-    <img src="images/sim1.png">
-    <img src="images/sim2.png">
-    <img src="images/sim3.png">
-    <img src="images/sim4.png">
+    <img src="images/sim1.png" onerror="this.style.display='none'">
+    <img src="images/sim2.png" onerror="this.style.display='none'">
+    <img src="images/sim3.png" onerror="this.style.display='none'">
+    <img src="images/sim4.png" onerror="this.style.display='none'">
   </div>
 </section>
 
+<!-- MODAL -->
 <div id="emailModal" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal()">&times;</span>
