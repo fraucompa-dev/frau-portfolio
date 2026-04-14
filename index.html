@@ -46,7 +46,18 @@ body.dark .navbar {
 
 header {
   text-align: center;
-  padding: 50px 20px;
+  padding: 70px 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  max-width: 600px;
+  margin: auto;
+  opacity: 0.8;
 }
 
 section {
@@ -58,7 +69,6 @@ section {
   border: 1px solid var(--border);
 }
 
-/* CARD STYLE */
 .card {
   border: 1px solid var(--border);
   padding: 15px;
@@ -71,7 +81,6 @@ section {
   transform: translateY(-3px);
 }
 
-/* IMAGE GRID (SMALLER + CURATED) */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -96,6 +105,21 @@ section {
   text-decoration: none;
   font-weight: bold;
 }
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 14px;
+  background: #0d6efd;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
 </style>
 </head>
 
@@ -109,8 +133,13 @@ section {
 <a class="cta" href="#contact">💼 Hire Me</a>
 
 <header>
-  <h1>FRAULINE A. COMPARATIVO</h1>
-  <p>Aspiring AWS Cloud & IT Professional</p>
+  <h1>Hi, I'm Frau 👋</h1>
+  <p>
+    Aspiring Cloud & Frontend Developer focused on AWS and modern web systems.
+    I build simple, clean, and scalable digital solutions while continuously learning cloud technologies.
+  </p>
+
+  <a class="btn" href="#projects">View My Work</a>
 </header>
 
 <!-- CONTACT -->
@@ -120,23 +149,13 @@ section {
   <p>📧 frau.compa@gmail.com</p>
   <p>📱 (+63) 951-644-0384 | (+63) 975-665-9136</p>
 
-  <a href="https://linkedin.com/in/frauline-adol-comparativo-509bb7117" target="_blank">
+  <a href="https://linkedin.com/in/frauline-adol-comparativo-509bb7117" target="_blank" class="btn">
     🔗 LinkedIn
   </a>
 
-  <br><br>
-
-  <a href="https://www.credly.com/users/frauline-comparativo/badges" target="_blank"
-     style="
-       display:inline-block;
-       padding:10px 14px;
-       background:#0d6efd;
-       color:white;
-       border-radius:8px;
-       text-decoration:none;
-       font-weight:bold;
-       margin-top:10px;
-     ">
+  <a href="https://www.credly.com/users/frauline-comparativo/badges"
+     target="_blank"
+     class="btn">
     🏅 View Credly Badges
   </a>
 </section>
@@ -144,9 +163,9 @@ section {
 <!-- SKILLS -->
 <section>
   <h2>Skills</h2>
+  <div class="card">HTML / CSS / Basic JavaScript</div>
   <div class="card">MS Office / Excel / Reporting</div>
   <div class="card">Salesforce / Addepar / Citrix</div>
-  <div class="card">Process Improvement & Operations</div>
   <div class="card">AWS Cloud Fundamentals</div>
 </section>
 
@@ -171,9 +190,11 @@ section {
   </div>
 </section>
 
-<!-- CLOUD (CURATED 3 IMAGES ONLY) -->
-<section>
-  <h2>☁️ Cloud Projects (Highlights)</h2>
+<!-- CLOUD -->
+<section id="projects">
+  <h2>☁️ Cloud & Tech Projects</h2>
+  <p>Selected highlights of my learning journey in cloud computing and IT systems.</p>
+
   <div class="grid">
     <img src="cloud1.png">
     <img src="cloud2.png">
